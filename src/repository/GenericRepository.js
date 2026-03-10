@@ -3,23 +3,23 @@ export default class GenericRepository {
         this.dao = dao;
     }
 
-    getAll = () => {
-        return this.dao.getAll();
+    getAll() {
+        return this.dao.get();
     }
 
-    getById = (id) => {
-        return this.dao.getById(id);
+    getBy(params) {
+        return this.dao.getBy(params);
     }
 
-    create = (data) => {
-        return this.dao.save(data);
+    create(doc) {
+        return this.dao.create(doc);
     }
 
-    update = (id, data) => {
-        return this.dao.update(id, data);
+    update(id, doc) {
+        return this.dao.update(id, doc);
     }
 
-    delete = (id) => {
+    delete(id) {
         return this.dao.delete(id);
     }
 }
